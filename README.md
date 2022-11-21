@@ -42,7 +42,8 @@ Users should be able to:
 - Live Site URL: [Click Me!](https://crypto-dot.github.io/FrontendMentorChallenge3/)
 
 ## My process
-    I started with the first page and tried to get the overall style down. Although I didn't fully complete the styling I immediately went into the Javascript, so I could get an idea of what elements I need to delete/add to the DOM after the submit button was pressed. The coding part was a bit tricky because I wanted to keep everything in it's own function and isolated from each other while at the same time sharing variables that aren't globally scoped (bad practice). Ultimately I went with an immediately invoked function with another one inside to mount the event listener on the submit button. Once I could see my JS code was running bug free I styled the last page.
+
+I started with the first page and tried to get the overall style down. Although I didn't fully complete the styling I immediately went into the Javascript, so I could get an idea of what elements I need to delete/add to the DOM after the submit button was pressed. The coding part was a bit tricky because I wanted to keep everything in it's own function and isolated from each other while at the same time sharing variables that aren't globally scoped (bad practice). Ultimately I went with an immediately invoked function with another one inside to mount the event listener on the submit button. Once I could see my JS code was running bug free I styled the last page.
     
 ### Built with
 
