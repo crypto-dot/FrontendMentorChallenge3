@@ -7,7 +7,8 @@
     --dark-blue: hsla(215, 20%, 17%, 1);
     --very-dark-blue: hsla(215, 24%, 12%, 1);
 
-    --rating-button-width: 3.1875rem;
+    --rating-button-width-desktop: 3.1875rem;
+    --rating-button-width-mobile: 2.625rem;
 
     --star-image-height: 3rem;
 
@@ -17,10 +18,11 @@
     --rating-button-font-size: 1rem;
     --rating-button-font-weight: var(--card-header-font-weight);
 
-    --submit-button-width: 21.3125rem;
-    --submit-button-height: 2.8125rem;
+    --submit-button-width-desktop: 21.3125rem;
+    --submit-button-height-desktop: 2.8125rem;
 
-    --card-paragraph-font-size: .9375rem;
+    --card-paragraph-font-size-desktop: .9375rem;
+    --card-paragraph-font-size-mobile: .875rem;
     --card-paragraph-line-height: 160%;
     --card-paragraph-font-weight: 400;
 
@@ -82,7 +84,7 @@ body {
 
 .p__article {
     color: var(--paragraph-color);
-    font-size: var(--card-paragraph-font-size);
+    font-size: var(--card-paragraph-font-size-desktop);
     line-height: var(--card-paragraph-line-height);
     font-weight: var(--card-paragraph-font-weight);
     margin-bottom: 1.5rem;
@@ -104,8 +106,8 @@ body {
 }
 
 .button__rating {
-    width: var(--rating-button-width);
-    height: var(--rating-button-width);
+    width: var(--rating-button-width-desktop);
+    height: var(--rating-button-width-desktop);
     border-radius: 50%;
     background-color: var(--dark-blue);
 }
@@ -140,10 +142,9 @@ body {
 
 .button__submit {
     position: relative;
-    width: 100%;
     border-radius: .5rem;
-    width: var(--submit-button-width);
-    height: var(--submit-button-height);
+    width: var(--submit-button-width-desktop);
+    height: var(--submit-button-height-desktop);
     font-weight: 400;
     background-color: var(--primary-color);
     color: var(--call-to-action-color);
@@ -186,7 +187,50 @@ body {
 .figureCaption__thankyou {
     padding: .5rem 1.25rem;
     background-color: var(--dark-blue);
-    font-size: var(--card-paragraph-font-size);
+    font-size: var(--card-paragraph-font-size-desktop);
     border-radius: 1rem;
     color: var(--primary-color);
+}
+
+@media (max-width:435px) {
+    .section__ratingCard {
+        width: var(--mobile-card-width);
+        height: var(--mobile-card-height);
+        padding: 1rem 1rem 1rem 1.25rem;
+    }
+
+    .button__rating {
+        width: var(--rating-button-width-mobile);
+        height: var(--rating-button-width-mobile);
+    }
+
+    .block__ratingContainer {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .h1__article {
+        margin-bottom: .75rem;
+    }
+
+    br {
+        display: none;
+    }
+
+    .figure__thankyou {
+        gap: 1.25rem;
+    }
+
+    .h1__article.rating__Submitted {
+        margin-top: 1.5rem;
+    }
+
+    .p__article {
+        font-size: var(--card-paragraph-font-size-mobile);
+    }
+
+
+    .button__submit {
+        width: 100%;
+    }
 }
