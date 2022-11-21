@@ -18,7 +18,7 @@
 
 
     function errorHandler() {
-        alert("do something");
+        alert("You must select a rating!");
     }
 
     function successfulSubmit() {
