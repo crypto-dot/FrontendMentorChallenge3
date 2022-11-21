@@ -58,7 +58,7 @@ body {
     background-image: var(--card-bg-color);
     width: var(--desktop-card-width);
     height: var(--desktop-card-height);
-    padding: 2rem;
+    padding: 2rem 2rem 2.25rem 2rem;
     border-radius: 2rem;
 }
 
@@ -92,6 +92,7 @@ body {
     margin-bottom: 2rem;
     display: flex;
     gap: 1.34rem;
+    border: none;
 }
 
 .button {
@@ -105,9 +106,26 @@ body {
 .button__rating {
     width: var(--rating-button-width);
     height: var(--rating-button-width);
-    color: var(--paragraph-color);
-    background-color: var(--dark-blue);
     border-radius: 50%;
+    background-color: var(--dark-blue);
+}
+
+.input {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+}
+
+.input:checked+.button__rating {
+    color: white;
+    background-color: var(--paragraph-color);
+}
+
+.button__rating {
+    color: var(--paragraph-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button__rating:hover {
@@ -133,7 +151,42 @@ body {
     border-radius: 3rem;
 }
 
+.button__submit:hover .span__submit {
+    bottom: 0;
+}
+
+.button__submit:hover {
+    color: var(--primary-color);
+    background-color: var(--call-to-action-color);
+}
+
 .span__submit {
     position: relative;
-    bottom: .2rem;
+    bottom: .1rem;
+    transition: .5s all;
+}
+
+.figure__thankyou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 2rem;
+}
+
+.rating__Submitted {
+    text-align: center;
+}
+
+.h1__article.rating__Submitted {
+    margin-top: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.figureCaption__thankyou {
+    padding: .5rem 1.25rem;
+    background-color: var(--dark-blue);
+    font-size: var(--card-paragraph-font-size);
+    border-radius: 1rem;
+    color: var(--primary-color);
 }

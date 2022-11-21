@@ -2,8 +2,8 @@
 
     let rating = 0;
     let selectedText = ``;
-    let currentActiveRatingButton = null;
 
+    const form = document.getElementById("form");
     const thankYouSVG = getThankYouSVG();
 
     const ratingCard = document.getElementById("ratingCard");
@@ -13,8 +13,8 @@
 
     const ratingBtns = Array.from(document.getElementsByClassName("button__rating"));
 
-    const headerText = "Thank You!";
-    const successText = "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!";
+    const headerText = "Thank you!";
+    const successText = "We appreciate you taking the time to give a rating. <br> If you ever need more support, don’t hesitate to <br> get in touch!";
 
 
     function errorHandler() {
@@ -27,7 +27,10 @@
         selectedText = `You selected ${rating} out of 5`;
         addFigureToRatingCard();
 
-        paragraph.textContent = successText;
+        header.classList.add("rating__Submitted");
+        paragraph.classList.add("rating__Submitted");
+
+        paragraph.innerHTML = successText;
         header.textContent = headerText;
     }
 
@@ -55,26 +58,12 @@
 
     (function mountSubmitBtnEventListener() {
         submitBtn.addEventListener("click", () => {
-            if (rating === 0) {
+            rating = new FormData(document.getElementById("form")).get("rating");
+            if (!rating) {
                 errorHandler();
                 return;
             }
             successfulSubmit();
-        });
-    })();
-
-    (function mountRatingBtnEventListeners() {
-        ratingBtns.forEach(btn => {
-            btn.addEventListener("click", (e) => {
-                if (currentActiveRatingButton !== e.target) {
-                    if (currentActiveRatingButton) {
-                        currentActiveRatingButton.classList.remove("active");
-                    }
-                    currentActiveRatingButton = e.target;
-                    currentActiveRatingButton.classList.add("active");
-                    rating = Number(btn.textContent);
-                }
-            });
         });
     })();
 
