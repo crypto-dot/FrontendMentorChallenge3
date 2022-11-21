@@ -79,7 +79,7 @@ body {
     font-size: var(--card-header-font-size);
     color: var(--call-to-action-color);
     font-weight: var(--card-header-font-weight);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .p__article {
