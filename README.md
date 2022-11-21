@@ -29,7 +29,11 @@ Users should be able to:
 
 #### Desktop
 
+<img width="1440" alt="Screen Shot 2022-11-21 at 12 53 19 AM" src="https://user-images.githubusercontent.com/78282234/202984256-eb2b5df9-4db0-454a-b303-355d924215c9.png">
+
 #### Mobile
+
+<img width="392" alt="Screen Shot 2022-11-20 at 11 42 02 PM" src="https://user-images.githubusercontent.com/78282234/202984156-04ab5797-7bf7-418a-8127-8c61cadba218.png">
 
 
 
@@ -39,18 +43,13 @@ Users should be able to:
 
 ## My process
     I started with the first page and tried to get the overall style down. Although I didn't fully complete the styling I immediately went into the Javascript, so I could get an idea of what elements I need to delete/add to the DOM after the submit button was pressed. The coding part was a bit tricky because I wanted to keep everything in it's own function and isolated from each other while at the same time sharing variables that aren't globally scoped (bad practice). Ultimately I went with an immediately invoked function with another one inside to mount the event listener on the submit button. Once I could see my JS code was running bug free I styled the last page.
+    
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Vanilla JS
 
 ### What I learned
 
