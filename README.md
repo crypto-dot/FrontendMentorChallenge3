@@ -153,5 +153,5 @@ I need to work on using more semantically correct HTML and to stop immediately r
 
 ## Author
 
-- Website - [Carlos](https://arbizu.dev)
+- Website - [Carlos Arbizu](https://arbizu.dev)
 - Frontend Mentor - [@crypto-dot](https://www.frontendmentor.io/profile/crypto-dot)
